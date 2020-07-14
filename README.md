@@ -1,5 +1,7 @@
 # kemal-flash
 
+![Crystal CI](https://github.com/mamantoha/kemal-flash/workflows/Crystal%20CI/badge.svg?branch=develop)
+
 `kemal-flash` provides a way to pass temporary information between actions. Anything
 that's placed in the flash will be cleared out at the end of the next action. `kemal-flash`
 depends on `kemal-session`. Make sure `kemal-session` is included before including
@@ -12,8 +14,8 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   kemal-flash:
-    github: neovintage/kemal-flash
-    version: 0.1.0
+    github: mamantoha/kemal-flash
+    branch: develop
 ```
 
 ## Usage
@@ -34,7 +36,7 @@ end
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/kemal-flash/fork )
+1. Fork it ( https://github.com/mamantoha/kemal-flash/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -42,4 +44,5 @@ end
 
 ## Contributors
 
-- [[neovintage]](https://github.com/neovintage) Rimas Silkaitis - creator, maintainer
+- [neovintage](https://github.com/neovintage) Rimas Silkaitis - creator, maintainer
+- [mamantoha](https://github.com/mamantoha) Anton Maminov - maintainer
