@@ -1,52 +1,35 @@
-require "json"
-
 module Kemal::Flash
   class FlashHash
-    JSON.mapping({
-      values: Hash(String, String),
-      discard: {type: Set(String), getter: false},
-    })
-    delegate each, empty?, keys, has_key?, delete, to_h, to: @values
+    include JSON::Serializable
+    include Session::StorableObject
+
+    property values : Hash(String, String)
+    setter discard : Set(String)
+
+    forward_missing_to @values
 
     def self.from_json(string_or_io)
       parser = JSON::PullParser.new(string_or_io)
       flash_hash = self.new(parser)
       flash_hash.sweep
-      return flash_hash
+
+      flash_hash
     end
 
-    def to_json
-      JSON.build do |json|
-        to_json(json)
-      end
-    end
-
-    def to_json(json : JSON::Builder)
+    def to_json(json : ::JSON::Builder)
       @values.reject!(@discard.to_a)
       @discard.clear
 
-      json.object do
-        json.field "values" { json.object {
-          @values.each do |k, v|
-            json.field k, v
-          end
-        } }
-        json.field "discard" { json.array {
-          @discard.each do |k|
-            json.scalar(k)
-          end
-        } }
-      end
+      super
     end
-    include Session::StorableObject
 
     def initialize
-      @values  = Hash(String, String).new
+      @values = Hash(String, String).new
       @discard = Set(String).new
     end
 
     def update(h : Hash(String, String))
-      @discard.subtract h.keys
+      @discard.subtract(h.keys)
       @values.merge!(h)
     end
 
@@ -74,14 +57,14 @@ module Kemal::Flash
     # Discards all keys at the end of the current action
     #
     def discard
-      @discard.merge!(@values.keys)
+      @discard.concat(@values.keys)
     end
 
     # Will remove any values that are in the discard set
     # and any keys that weren't rejected will now be up for
     # discard at the end of the current action
     #
-    def sweep #:nodoc:
+    def sweep
       @values.reject!(@discard.to_a)
       @discard = Set(String).new(@values.keys)
     end

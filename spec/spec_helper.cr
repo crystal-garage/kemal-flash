@@ -4,33 +4,33 @@ require "../src/kemal-flash"
 
 ENV["KEMAL_ENV"] = "test"
 
-Kemal.config.logging  = false
-Session.config.engine = Session::MemoryEngine.new
-Session.config.secret = "kemal_rocks"
+Kemal.config.logging = false
+Kemal::Session.config.engine = Kemal::Session::MemoryEngine.new
+Kemal::Session.config.secret = "kemal_rocks"
 
 module TestKemalApp
   get "/set_flash" do |context|
-    context.flash["charlie"] = "snoopy"
+    context.flash["notice"] = "successfully created"
     "made it"
   end
 
   get "/use_flash" do |context|
-    context.flash["charlie"]?
+    context.flash["notice"]?
   end
 
   get "/use_flash_and_update_it" do |context|
-    context.flash["charlie"]?
-    context.flash["lucy"] = "linus"
+    message = context.flash["notice"]?
+    context.flash["notice"] = "#{message}, well done"
   end
 
   get "/flash_json" do |context|
-    context.flash.to_json
+    context.flash.to_h.to_json
   end
 
   get "/redirect" do |context|
-    context.flash["schroeder"] = "sally"
+    context.flash["notice"] = "successfully created"
     context.redirect "/flash_json"
   end
 end
 
-Kemal.run
+spawn { Kemal.run }
