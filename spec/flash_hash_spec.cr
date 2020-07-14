@@ -96,7 +96,7 @@ describe FlashHash do
     fh["lucy"] = "linus"
 
     count = 0
-    fh.each do |k, v|
+    fh.each do |k, _v|
       count += 1
       ["chuck", "lucy"].includes?(k)
     end

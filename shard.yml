@@ -1,16 +1,20 @@
 name: kemal-flash
 version: 0.1.0
 
-development_dependencies:
+dependencies:
   kemal:
     github: kemalcr/kemal
     branch: master
   kemal-session:
     github: kemalcr/kemal-session
     branch: master
-  spec-kemal:
+
+development_dependencies:
+ spec-kemal:
     github: kemalcr/spec-kemal
     branch: master
+ ameba:
+   github: crystal-ameba/ameba
 
 authors:
   - Rimas Silkaitis <neovintage@gmail.com>
