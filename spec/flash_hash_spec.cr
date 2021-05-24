@@ -15,7 +15,7 @@ describe FlashHash do
     fh.keys.should eq(["chuck"])
 
     fh["lucy"] = "linus"
-    fh.keys.sort.should eq(["chuck", "lucy"])
+    fh.keys.sort!.should eq(["chuck", "lucy"])
   end
 
   it "should update" do
