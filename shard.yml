@@ -1,22 +1,22 @@
 name: kemal-flash
 version: 0.1.0
 
+crystal: ">= 0.36.0"
+
 dependencies:
   kemal:
     github: kemalcr/kemal
-    branch: master
   kemal-session:
     github: kemalcr/kemal-session
-    branch: master
 
 development_dependencies:
  spec-kemal:
     github: kemalcr/spec-kemal
-    branch: master
  ameba:
    github: crystal-ameba/ameba
 
 authors:
   - Rimas Silkaitis <neovintage@gmail.com>
+  - Anton Maminov <anton.maminov@gmail.com>
 
 license: MIT
