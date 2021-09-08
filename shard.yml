@@ -6,6 +6,7 @@ crystal: ">= 0.36.0"
 dependencies:
   kemal:
     github: kemalcr/kemal
+    branch: master
   kemal-session:
     github: kemalcr/kemal-session
 
