@@ -4,6 +4,8 @@
 [![GitHub release](https://img.shields.io/github/release/mamantoha/kemal-flash.svg)](https://github.com/mamantoha/kemal-flash/releases)
 [![License](https://img.shields.io/github/license/mamantoha/kemal-flash.svg)](https://github.com/mamantoha/kemal-flash/blob/develop/LICENSE)
 
+> A fork of the [kemal-flash](https://github.com/neovintage/kemal-flash) library that I created because the original not working anymore and has not received any updates for a long time.
+
 `kemal-flash` provides a way to pass temporary information between actions. Anything
 that's placed in the flash will be cleared out at the end of the next action. `kemal-flash`
 depends on `kemal-session`. Make sure `kemal-session` is included before including
