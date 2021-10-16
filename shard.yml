@@ -1,12 +1,11 @@
 name: kemal-flash
-version: 0.1.0
+version: 0.2.0
 
 crystal: ">= 0.36.0"
 
 dependencies:
   kemal:
     github: kemalcr/kemal
-    branch: master
   kemal-session:
     github: kemalcr/kemal-session
 
