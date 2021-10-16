@@ -1,6 +1,8 @@
 # kemal-flash
 
 ![Crystal CI](https://github.com/mamantoha/kemal-flash/workflows/Crystal%20CI/badge.svg?branch=develop)
+[![GitHub release](https://img.shields.io/github/release/mamantoha/kemal-flash.svg)](https://github.com/mamantoha/kemal-flash/releases)
+[![License](https://img.shields.io/github/license/mamantoha/kemal-flash.svg)](https://github.com/mamantoha/kemal-flash/blob/develop/LICENSE)
 
 `kemal-flash` provides a way to pass temporary information between actions. Anything
 that's placed in the flash will be cleared out at the end of the next action. `kemal-flash`
