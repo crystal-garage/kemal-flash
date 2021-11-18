@@ -1,8 +1,8 @@
 # kemal-flash
 
-![Crystal CI](https://github.com/mamantoha/kemal-flash/workflows/Crystal%20CI/badge.svg?branch=develop)
-[![GitHub release](https://img.shields.io/github/release/mamantoha/kemal-flash.svg)](https://github.com/mamantoha/kemal-flash/releases)
-[![License](https://img.shields.io/github/license/mamantoha/kemal-flash.svg)](https://github.com/mamantoha/kemal-flash/blob/develop/LICENSE)
+![Crystal CI](https://github.com/crystal-garage/kemal-flash/workflows/Crystal%20CI/badge.svg?branch=develop)
+[![GitHub release](https://img.shields.io/github/release/crystal-garage/kemal-flash.svg)](https://github.com/crystal-garage/kemal-flash/releases)
+[![License](https://img.shields.io/github/license/crystal-garage/kemal-flash.svg)](https://github.com/crystal-garage/kemal-flash/blob/develop/LICENSE)
 
 > A fork of the [kemal-flash](https://github.com/neovintage/kemal-flash) library that I created because the original not working anymore and has not received any updates for a long time.
 
@@ -18,7 +18,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   kemal-flash:
-    github: mamantoha/kemal-flash
+    github: crystal-garage/kemal-flash
     branch: develop
 ```
 
@@ -40,7 +40,7 @@ end
 
 ## Contributing
 
-1. Fork it ( https://github.com/mamantoha/kemal-flash/fork )
+1. Fork it ( https://github.com/crystal-garage/kemal-flash/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
