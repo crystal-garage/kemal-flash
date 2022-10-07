@@ -6,8 +6,10 @@ crystal: ">= 0.36.0"
 dependencies:
   kemal:
     github: kemalcr/kemal
+    branch: master
   kemal-session:
     github: kemalcr/kemal-session
+    version: ">= 1.0.0"
 
 development_dependencies:
  spec-kemal:
