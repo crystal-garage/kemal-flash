@@ -1,6 +1,6 @@
 # kemal-flash
 
-![Crystal CI](https://github.com/crystal-garage/kemal-flash/workflows/Crystal%20CI/badge.svg?branch=develop)
+[![Crystal CI](https://github.com/crystal-garage/kemal-flash/actions/workflows/crystal.yml/badge.svg)](https://github.com/crystal-garage/kemal-flash/actions/workflows/crystal.yml)
 [![GitHub release](https://img.shields.io/github/release/crystal-garage/kemal-flash.svg)](https://github.com/crystal-garage/kemal-flash/releases)
 [![License](https://img.shields.io/github/license/crystal-garage/kemal-flash.svg)](https://github.com/crystal-garage/kemal-flash/blob/develop/LICENSE)
 
