@@ -1,5 +1,6 @@
 require "spec"
 require "spec-kemal"
+require "spec-kemal/session"
 require "../src/kemal-flash"
 
 ENV["KEMAL_ENV"] = "test"

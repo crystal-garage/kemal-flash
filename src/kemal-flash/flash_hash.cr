@@ -10,7 +10,7 @@ module Kemal::Flash
 
     def self.from_json(string_or_io)
       parser = JSON::PullParser.new(string_or_io)
-      flash_hash = self.new(parser)
+      flash_hash = new(parser)
       flash_hash.sweep
 
       flash_hash

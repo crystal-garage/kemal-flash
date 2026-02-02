@@ -29,9 +29,9 @@ describe FlashHash do
 
   it "should test if key exists" do
     fh = FlashHash.new
-    fh.has_key?("chuck").should eq(false)
+    fh.has_key?("chuck").should be_false
     fh["chuck"] = ""
-    fh.has_key?("chuck").should eq(true)
+    fh.has_key?("chuck").should be_true
   end
 
   it "should delete a value" do
