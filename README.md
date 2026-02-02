@@ -4,6 +4,8 @@
 [![GitHub release](https://img.shields.io/github/release/crystal-garage/kemal-flash.svg)](https://github.com/crystal-garage/kemal-flash/releases)
 [![License](https://img.shields.io/github/license/crystal-garage/kemal-flash.svg)](https://github.com/crystal-garage/kemal-flash/blob/develop/LICENSE)
 
+> ⚠️ **DEPRECATED**: This repository is deprecated. As of [kemal-session PR #112](https://github.com/kemalcr/kemal-session/pull/112), flash functionality has been integrated directly into kemal-session. This library is no longer needed and will not receive further updates. Please migrate to using the flash functionality provided by kemal-session directly.
+
 > A fork of the [kemal-flash](https://github.com/neovintage/kemal-flash) library that I created because the original not working anymore and has not received any updates for a long time.
 
 `kemal-flash` provides a way to pass temporary information between actions. Anything
