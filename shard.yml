@@ -14,8 +14,6 @@ dependencies:
 development_dependencies:
  spec-kemal:
     github: kemalcr/spec-kemal
- ameba:
-   github: crystal-ameba/ameba
 
 authors:
   - Rimas Silkaitis <neovintage@gmail.com>

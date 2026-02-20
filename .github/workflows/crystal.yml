@@ -25,13 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Crystal
-        uses: oprypin/install-crystal@v1
+        uses: crystal-lang/install-crystal@v1
       - name: Check out repository code
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: shards install
-      - name: Check ameba
-        run: ./bin/ameba
+        uses: actions/checkout@v6
+      - name: Crystal Ameba Linter
+        id: crystal-ameba
+        uses: crystal-ameba/github-action@v0.12.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test:
     strategy:
